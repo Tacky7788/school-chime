@@ -1,7 +1,7 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "SchoolChime",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "identifier": "com.schoolchime.app",
   "build": {
     "frontendDist": "../dist",
@@ -36,7 +36,11 @@
     ],
     "windows": {
       "nsis": {
-        "installMode": "currentUser"
+        "installMode": "currentUser",
+        "installerIcon": "icons/icon.ico",
+        "headerImage": null,
+        "sidebarImage": null,
+        "languages": ["Japanese"]
       }
     }
   }

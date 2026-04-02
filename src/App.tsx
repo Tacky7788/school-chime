@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { enable, disable, isEnabled } from "@tauri-apps/plugin-autostart";
 import {
   playChime,
   playTestChime,
@@ -84,6 +85,7 @@ export default function App() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [sounds, setSounds] = useState<SoundEntry[]>([]);
   const [volume, setVolumeState] = useState(getVolume());
+  const [autostart, setAutostart] = useState(false);
   const [ready, setReady] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const firedRef = useRef<Set<string>>(new Set());
@@ -94,6 +96,7 @@ export default function App() {
       setVolumeState(getVolume());
       setReady(true);
     });
+    isEnabled().then(setAutostart).catch(() => {});
   }, []);
 
   useEffect(() => {
@@ -170,6 +173,14 @@ export default function App() {
     setSchedule(DEFAULT_SCHEDULE);
     saveSchedule(DEFAULT_SCHEDULE);
     setEditingId(null);
+  };
+
+  const handleAutostart = async (val: boolean) => {
+    try {
+      if (val) await enable();
+      else await disable();
+      setAutostart(val);
+    } catch {}
   };
 
   const handleVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -431,6 +442,18 @@ export default function App() {
             onChange={handleAddSound}
             style={{ display: "none" }}
           />
+        </div>
+
+        <div className="settings-row">
+          <span className="settings-label">Windows起動時に自動起動</span>
+          <label className="switch">
+            <input
+              type="checkbox"
+              checked={autostart}
+              onChange={(e) => handleAutostart(e.target.checked)}
+            />
+            <span className="slider" />
+          </label>
         </div>
 
         <div className="chalk-tray">

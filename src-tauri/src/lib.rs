@@ -3,10 +3,12 @@ use tauri::{
   tray::{MouseButton, MouseButtonState, TrayIconBuilder, TrayIconEvent},
   Manager, WindowEvent,
 };
+use tauri_plugin_autostart::MacosLauncher;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
   tauri::Builder::default()
+    .plugin(tauri_plugin_autostart::init(MacosLauncher::LaunchAgent, None))
     .setup(|app| {
       if cfg!(debug_assertions) {
         app.handle().plugin(

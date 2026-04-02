@@ -670,6 +670,22 @@ body {
   color: var(--chalk);
 }
 
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 10px 14px;
+  background: var(--board-dark);
+  border: 1px dashed var(--chalk-faint);
+  border-radius: 6px;
+}
+
+.settings-label {
+  font-size: 13px;
+  color: var(--chalk-dim);
+}
+
 .credit {
   margin-top: 12px;
   text-align: center;
