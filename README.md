@@ -2,6 +2,8 @@
 
 PCで学校のチャイムを鳴らすデスクトップアプリ。
 
+![SchoolChime](docs/screenshot.png)
+
 ## 機能
 
 - 時間割に合わせて自動でチャイムが鳴る
@@ -14,7 +16,7 @@ PCで学校のチャイムを鳴らすデスクトップアプリ。
 
 ## インストール
 
-[Releases](https://github.com/rippyrippy/school-chime/releases) から `SchoolChime_x.x.x_x64-setup.exe` をダウンロードして実行。
+[Releases](https://github.com/Tacky7788/school-chime/releases) から `SchoolChime_x.x.x_x64-setup.exe` をダウンロードして実行。
 
 ## 開発
 

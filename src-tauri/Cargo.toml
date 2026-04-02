@@ -1,10 +1,10 @@
 [package]
 name = "app"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
+description = "School chime desktop app"
+authors = ["Tacky7788"]
+license = "MIT"
+repository = "https://github.com/Tacky7788/school-chime"
 edition = "2021"
 rust-version = "1.77.2"
 
