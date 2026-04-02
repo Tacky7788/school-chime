@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background: dark green chalkboard -->
+  <rect width="512" height="512" rx="96" ry="96" fill="#2a5a3a"/>
+
+  <!-- Bell body -->
+  <path d="
+    M256 120
+    C256 120 180 160 172 260
+    L172 300
+    L340 300
+    L340 260
+    C332 160 256 120 256 120
+    Z
+  " fill="#f0ece4"/>
+
+  <!-- Bell top knob -->
+  <rect x="240" y="96" width="32" height="36" rx="8" fill="#f0ece4"/>
+
+  <!-- Bell bottom rim (wider) -->
+  <path d="
+    M155 300
+    Q155 316 175 320
+    L337 320
+    Q357 316 357 300
+    Z
+  " fill="#f0ece4"/>
+
+  <!-- Bell clapper -->
+  <line x1="256" y1="320" x2="256" y2="348" stroke="#f0ece4" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="256" cy="364" r="18" fill="#f0ece4"/>
+
+  <!-- Sound waves left -->
+  <path d="M148 200 Q120 240 148 280" fill="none" stroke="#f0ece4" stroke-width="14" stroke-linecap="round" opacity="0.65"/>
+  <path d="M116 180 Q74 240 116 300" fill="none" stroke="#f0ece4" stroke-width="12" stroke-linecap="round" opacity="0.35"/>
+
+  <!-- Sound waves right -->
+  <path d="M364 200 Q392 240 364 280" fill="none" stroke="#f0ece4" stroke-width="14" stroke-linecap="round" opacity="0.65"/>
+  <path d="M396 180 Q438 240 396 300" fill="none" stroke="#f0ece4" stroke-width="12" stroke-linecap="round" opacity="0.35"/>
+</svg>
